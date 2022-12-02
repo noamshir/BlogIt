@@ -1,0 +1,15 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-layout {
+        padding-left: $padding;
+        padding-right: $padding;
+}

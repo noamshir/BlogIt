@@ -1,0 +1,16 @@
+// setup
+@import './setup/bootstrap.scss';
+@import './setup/variables.scss';
+@import './setup/helpers';
+
+// base
+@import './base.scss';
+
+// screens
+@import './screens/home.scss';
+
+// components
+// @general
+@import './components/general/logo.scss';
+@import './components/general/main-header.scss';
+
