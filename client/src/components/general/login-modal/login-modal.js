@@ -1,16 +1,24 @@
 import { useState } from 'react'
-import Button from 'react-bootstrap/esm/Button'
 import Modal from 'react-bootstrap/Modal'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
 import { SignUpForm } from '../../forms/sign-up-form'
 import { LoginForm } from '../../forms/login-form'
 
 const LoginModal = ({ show, onHide }) => {
   const [isSignUp, setIsSignUp] = useState(true)
 
-  const onSubmit = () => {
-    console.log('Form submited')
+  const toggleModalType = () => {
+    setIsSignUp(!isSignUp)
+  }
+
+  const renderFooterContent = () => {
+    const questionText = isSignUp ? 'Already have an account? ' : 'No account? '
+    const actionText = isSignUp ? 'Sign in' : 'Create one'
+    return (
+      <p className='login-modal-footer-text'>
+        {questionText} <span onClick={toggleModalType}>{actionText}</span>
+      </p>
+    )
   }
 
   const modalTitle = isSignUp ? 'Sign Up' : 'Login'
@@ -22,16 +30,20 @@ const LoginModal = ({ show, onHide }) => {
       onHide={onHide}
       animation={false}
       centered
+      className='login-modal'
     >
-      <Modal.Header className='justify-content-md-center'>
+      <Modal.Header closeButton>
         <Modal.Title>{modalTitle}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>{isSignUp ? <SignUpForm /> : <LoginForm />}</Modal.Body>
-      <Modal.Footer>
-        <Button variant='secondary' onClick={onHide}>
-          Close
-        </Button>
-        <Button variant='primary'>Understood</Button>
+      <Modal.Body>
+        {isSignUp ? (
+          <SignUpForm closeModal={onHide} />
+        ) : (
+          <LoginForm closeModal={onHide} />
+        )}
+      </Modal.Body>
+      <Modal.Footer className='justify-content-center'>
+        {renderFooterContent()}
       </Modal.Footer>
     </Modal>
   )

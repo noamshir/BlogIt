@@ -1,0 +1,10 @@
+.login-modal {
+ .login-modal-footer-text {
+    font-size: 1rem;
+    span {
+        font-weight: bold;
+        color: $primary;
+        cursor: pointer;
+    }
+ }
+}

@@ -1,10 +1,12 @@
-import { Formik } from 'formik'
 import * as yup from 'yup'
-import React from 'react'
-import { Button, Col, Form, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
+
+import { GeneralForm } from './general-form'
 import { TextField } from './text-field'
 
-const SignUpForm = () => {
+const SignUpForm = ({ closeModal }) => {
+  const initialValues = { firstName: '', lastName: '', email: '', password: '' }
+
   const schema = yup.object({
     firstName: yup.string().min(2).max(15).required(),
     lastName: yup.string().min(2).max(15).required(),
@@ -12,37 +14,54 @@ const SignUpForm = () => {
     password: yup.string().min(4).max(12).required(),
   })
 
-  const onSubmit = () => {
+  const onSubmit = (values) => {
     console.log('Done!')
+    closeModal()
   }
 
   return (
-    <Formik
-      initialValues={{ firstName: '', lastName: '', email: '', password: '' }}
+    <GeneralForm
+      initialValues={initialValues}
       validationSchema={schema}
       onSubmit={onSubmit}
+      buttonTxt='Sign Up'
     >
-      <Form>
-        <TextField
-          fieldId='email'
-          label='Email address'
-          type='email'
-          placeholder='Enter email'
-          controlId='formBasicEmail'
-        />
-        <TextField
-          fieldId='password'
-          label='Password'
-          type='text'
-          placeholder='Password'
-          controlId='formBasicPassword'
-        />
+      <Row>
+        <Col sm={6}>
+          <TextField
+            fieldId='firstName'
+            label='First Name'
+            type='text'
+            placeholder='Enter First Name'
+            controlId='formBasicFirstName'
+          />
+        </Col>
+        <Col sm={6}>
+          <TextField
+            fieldId='lastName'
+            label='Last Name'
+            type='text'
+            placeholder='Enter Last Name'
+            controlId='formBasicLastName'
+          />
+        </Col>
+      </Row>
 
-        <Button variant='primary' type='submit'>
-          Submit
-        </Button>
-      </Form>
-    </Formik>
+      <TextField
+        fieldId='email'
+        label='Email address'
+        type='email'
+        placeholder='Enter email'
+        controlId='formBasicEmail'
+      />
+      <TextField
+        fieldId='password'
+        label='Password'
+        type='text'
+        placeholder='Password'
+        controlId='formBasicPassword'
+      />
+    </GeneralForm>
   )
 }
 

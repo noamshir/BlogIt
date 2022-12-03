@@ -1,45 +1,43 @@
-import { Formik } from 'formik'
 import * as yup from 'yup'
 import React from 'react'
-import { Button, Form } from 'react-bootstrap'
 import { TextField } from './text-field'
+import { GeneralForm } from './general-form'
 
-const LoginForm = () => {
+const LoginForm = ({ closeModal }) => {
   const schema = yup.object({
     email: yup.string().email().required(),
     password: yup.string().min(4).max(12).required(),
   })
 
-  const onSubmit = () => {
+  const initialValues = { firstName: '', lastName: '', email: '', password: '' }
+
+  const onSubmit = (values) => {
     console.log('Logged in!')
+    closeModal()
   }
 
   return (
-    <Formik
-      initialValues={{ firstName: '', lastName: '', email: '', password: '' }}
+    <GeneralForm
+      initialValues={initialValues}
       validationSchema={schema}
       onSubmit={onSubmit}
+      buttonTxt='Login'
     >
-      <Form>
-        <TextField
-          fieldId='email'
-          label='Email address'
-          type='email'
-          placeholder='Enter email'
-          controlId='formBasicEmail'
-        />
-        <TextField
-          fieldId='password'
-          label='Password'
-          type='text'
-          placeholder='Password'
-          controlId='formBasicPassword'
-        />
-        <Button variant='primary' type='submit'>
-          Submit
-        </Button>
-      </Form>
-    </Formik>
+      <TextField
+        fieldId='email'
+        label='Email address'
+        type='email'
+        placeholder='Enter email'
+        controlId='formBasicEmail'
+      />
+      <TextField
+        fieldId='password'
+        label='Password'
+        type='text'
+        placeholder='Password'
+        controlId='formBasicPassword'
+      />
+    </GeneralForm>
   )
 }
 

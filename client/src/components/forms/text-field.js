@@ -9,6 +9,12 @@ const TextField = ({
   placeholder,
   controlId,
 }) => {
+  // We want the error msg to be with the label text,
+  // not with the fieldId.
+  const getErrorMsg = ({ error }) => {
+    return error?.replace(fieldId, label)
+  }
+
   return (
     <Field name={fieldId}>
       {({ field, meta }) => (
@@ -23,7 +29,7 @@ const TextField = ({
             feedback={meta.error}
           />
           <Form.Control.Feedback type='invalid'>
-            {meta.error}
+            {getErrorMsg(meta)}
           </Form.Control.Feedback>
         </Form.Group>
       )}
