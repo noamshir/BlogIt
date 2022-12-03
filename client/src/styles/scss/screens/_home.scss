@@ -1,0 +1,22 @@
+.home-hero {
+    background-color: $primary;
+    min-height: 300px;
+    justify-content: space-between;
+    .home-hero-text{
+        height: 100%;
+        .hero-text-title {
+            font-size: 2.5rem;
+            color: #fff;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .hero-text {
+            font-size: 1.2rem;
+        }
+    }
+    .code-folder-container{
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+}

@@ -2,6 +2,18 @@
     display: flex;
 }
 
+// flex with direction row
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+// flex with direction column
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
 // align-items-center
 .aic {
     align-items: center;
