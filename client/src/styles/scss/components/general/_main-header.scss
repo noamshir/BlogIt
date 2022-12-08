@@ -1,10 +1,13 @@
 .main-header-container {
-    .logo-and-name-container {
-        gap: 5px;
-        .siteName {
-          span {
-              color: #25c4dd;
-          }
-        }
+  .logo-and-name-container {
+    gap: 5px;
+    .siteName {
+      span {
+        color: #25c4dd;
       }
+    }
+  }
+  .join-nav-item {
+    padding: 8px;
+  }
 }

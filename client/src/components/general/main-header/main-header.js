@@ -28,7 +28,7 @@ const MainHeader = () => {
         <Nav activeKey={activeKey} className='flex aic'>
           <Nav.Link href='/'>Home</Nav.Link>
           <Nav.Link href='/create'>Create your own</Nav.Link>
-          <Nav.Item>
+          <Nav.Item className='join-nav-item'>
             <Button variant='primary' size='sm' onClick={toggleModal}>
               JOIN
             </Button>
