@@ -1,0 +1,8 @@
+.popular-articles-container {
+  padding: $padding;
+  .popular-articles-list {
+    .article-preview {
+      flex-basis: 33.3%;
+    }
+  }
+}

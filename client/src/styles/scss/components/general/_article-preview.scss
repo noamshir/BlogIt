@@ -1,0 +1,14 @@
+.article-preview {
+    margin-top: 1rem;
+    .article-preview-header {
+        gap: 12px;
+        .username {
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    }
+    .article-preview-title {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
