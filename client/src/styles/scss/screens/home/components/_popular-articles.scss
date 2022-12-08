@@ -1,8 +1,14 @@
 .popular-articles-container {
-  padding: $padding;
+  margin-top: $padding;
   .popular-articles-list {
     .article-preview {
-      flex-basis: 33.3%;
+      flex-basis: 100%;
+      @include large-mobile-layout {
+        flex-basis: 50%;
+      }
+      @include tablet-layout {
+        flex-basis: 33.3%;
+      }
     }
   }
 }

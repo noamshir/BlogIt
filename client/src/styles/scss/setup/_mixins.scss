@@ -1,0 +1,23 @@
+@mixin large-mobile-layout {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet-layout {
+    @media (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin large-layout {
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin wide-layout {
+    @media (min-width: $wide) {
+        @content;
+    }
+}

@@ -1,22 +1,35 @@
 .home-hero {
-    background-color: $primary;
-    min-height: 300px;
-    justify-content: space-between;
-    .home-hero-text{
-        height: 100%;
-        .hero-text-title {
-            font-size: 2.5rem;
-            color: #fff;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-        .hero-text {
-            font-size: 1.2rem;
-        }
-    }
-    .code-folder-container{
-      img {
-        width: 150px;
-        height: 150px;
+  background-color: $primary;
+  min-height: 300px;
+  justify-content: space-between;
+  .home-hero-text {
+    height: 100%;
+    .hero-text-title {
+      font-size: 2.5rem;
+      color: #fff;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-align: center;
+      @include large-mobile-layout {
+        text-align: left;
       }
     }
+    .hero-sub-text {
+      display: none;
+      @include tablet-layout {
+        display: block;
+      }
+      font-size: 1.2rem;
+    }
+  }
+  .code-folder-container {
+    height: 100%;
+    justify-content: center;
+    @include tablet-layout {
+      justify-content: end;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }

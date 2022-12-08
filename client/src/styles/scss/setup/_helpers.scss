@@ -14,6 +14,7 @@
     flex-direction: column;
 }
 
+// flex wrap
 .fw {
     flex-wrap: wrap;
 }
@@ -23,7 +24,12 @@
     align-items: center;
 }
 
-// justify-content-center 
+// justify-content-center
 .jcc {
     justify-content: center;
+}
+
+// justify-content end
+.jce {
+    justify-content: end;
 }

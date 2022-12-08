@@ -18,7 +18,7 @@ const MainHeader = () => {
 
   return (
     <Navbar bg='dark' variant='dark' className=''>
-      <Container className='main-header-container main-layout' fluid>
+      <Container className='main-header-container'>
         <Navbar.Brand href='/' className='logo-and-name-container flex aic'>
           <Logo />
           <h1 className='siteName'>

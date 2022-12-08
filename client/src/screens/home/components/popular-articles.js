@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 import { ArticlePreview } from '../../../components/general/article-preview'
 
 const PopularArticles = () => {
@@ -59,14 +60,14 @@ const PopularArticles = () => {
     },
   ]
   return (
-    <div className='popular-articles-container main-layout'>
+    <Container className='popular-articles-container'>
       <p>Popular on BlogIT</p>
       <div className='popular-articles-list flex fw'>
         {articles.map((article) => {
           return <ArticlePreview article={article} />
         })}
       </div>
-    </div>
+    </Container>
   )
 }
 
