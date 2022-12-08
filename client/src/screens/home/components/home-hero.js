@@ -1,4 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap'
+import { Text } from '../../../components/general/text'
 import codeFolderImg from '../../../styles/img/code-folder.png'
 
 const HomeHero = () => {
@@ -8,13 +9,15 @@ const HomeHero = () => {
         <Row>
           <Col xm={8}>
             <div className='home-hero-text  flex-col jcc'>
-              <p className='hero-text-title'>
-                Learn Something new. All the time.
-              </p>
-              <p className='text-start hero-sub-text'>
-                Discover stories, thinking, and expertise from writers on any
-                tech topic.
-              </p>
+              <Text
+                className='hero-text-title'
+                value='Learn Something new. All the time.'
+              />
+              <Text
+                className='text-start hero-sub-text'
+                value='Discover stories, thinking, and expertise from writers on any
+                tech topic.'
+              />
             </div>
           </Col>
           <Col xm={4}>

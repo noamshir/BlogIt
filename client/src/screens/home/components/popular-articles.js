@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { ArticlePreview } from '../../../components/general/article-preview'
+import { Text } from '../../../components/general/text'
 
 const PopularArticles = () => {
   const articles = [
@@ -8,7 +9,7 @@ const PopularArticles = () => {
       id: 1,
       title: 'Python - for beginners',
       user: {
-        name: 'Dev IL',
+        username: 'Dev IL',
         img: '',
       },
       readTime: '2 min read',
@@ -17,7 +18,7 @@ const PopularArticles = () => {
       id: 2,
       title: 'Hack your parents',
       user: {
-        name: 'Kobe Lory',
+        username: 'Kobe Lory',
         img: '',
       },
       readTime: '5 min read',
@@ -26,7 +27,7 @@ const PopularArticles = () => {
       id: 3,
       title: 'Angular - Who needs dat?',
       user: {
-        name: 'ReactIt',
+        username: 'ReactIt',
         img: '',
       },
       readTime: '1 min read',
@@ -35,7 +36,7 @@ const PopularArticles = () => {
       id: 4,
       title: 'JS - 2022',
       user: {
-        name: 'MDN',
+        username: 'MDN',
         img: '',
       },
       readTime: '15 min read',
@@ -44,7 +45,7 @@ const PopularArticles = () => {
       id: 5,
       title: 'Node JS - single thread magic',
       user: {
-        name: 'Harry Potter',
+        username: 'Harry Potter',
         img: '',
       },
       readTime: '4 min read',
@@ -53,7 +54,7 @@ const PopularArticles = () => {
       id: 6,
       title: 'Sql Vs NoSql - Which is for you?',
       user: {
-        name: 'Noam lok',
+        username: 'Noam lok',
         img: '',
       },
       readTime: '2 min read',
@@ -61,7 +62,7 @@ const PopularArticles = () => {
   ]
   return (
     <Container className='popular-articles-container'>
-      <p>Popular on BlogIT</p>
+      <Text value='Popular on BlogIT' />
       <div className='popular-articles-list flex fw'>
         {articles.map((article) => {
           return <ArticlePreview article={article} />

@@ -1,11 +1,12 @@
 import React from 'react'
+import { Text } from '../text'
 import { UserImage } from '../user-image'
 const ArticlePreview = ({ article }) => {
   const ArticlePreviewHeader = ({ user }) => {
     return (
       <header className='article-preview-header flex aic'>
         <UserImage src={user.img} />
-        <p className='username'>{user.name}</p>
+        <Text className='username' value={user.username} />
       </header>
     )
   }
