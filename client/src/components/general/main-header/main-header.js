@@ -17,7 +17,7 @@ const MainHeader = () => {
   }
 
   return (
-    <Navbar bg='dark' variant='dark' className=''>
+    <Navbar bg='dark' variant='dark' className='sticky'>
       <Container className='main-header-container'>
         <Navbar.Brand href='/' className='logo-and-name-container flex aic'>
           <Logo />

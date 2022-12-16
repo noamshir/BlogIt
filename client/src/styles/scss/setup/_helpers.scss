@@ -29,7 +29,22 @@
     justify-content: center;
 }
 
+// justify-content-space-between
+.jcsb {
+    justify-content: space-between;
+}
+
 // justify-content end
 .jce {
     justify-content: end;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+// Colors
+.light {
+    color: $light;
 }

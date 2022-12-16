@@ -1,0 +1,23 @@
+.home-screen {
+    hr {
+        margin-top: $padding;
+    }
+    .home-screen-mc {
+        display: flex;
+        flex-direction: column-reverse;
+        @include tablet-layout {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(12, 1fr);
+            flex-direction: column-reverse;
+            .articles-list {
+                grid-row-start: 1;
+                grid-column: 1 / span 8;
+            }
+            .side-bar {
+                grid-row-start: 1;
+                grid-column: 9 / span 4;
+            }
+        }
+    }
+}

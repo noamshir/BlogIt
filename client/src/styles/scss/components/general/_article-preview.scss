@@ -1,6 +1,14 @@
 .article-preview {
     margin-top: 1rem;
     padding-right: 1rem;
+    &.full-preview {
+        width: 100%;
+        justify-content: space-between;
+        .article-preview-title {
+            font-size: 1.7rem;
+        }
+        gap: 1rem;
+    }
     .article-preview-header {
         gap: 12px;
         .username {
@@ -9,7 +17,12 @@
         }
     }
     .article-preview-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
         cursor: pointer;
+    }
+    .preview-img {
+        width: 200px;
+        height: 134px;
     }
 }
