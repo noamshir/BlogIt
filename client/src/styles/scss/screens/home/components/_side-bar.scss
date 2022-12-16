@@ -1,0 +1,15 @@
+.side-bar {
+    .side-bar-topics {
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .topic-item {
+        cursor: pointer;
+        border: 1px solid $very-light;
+        padding: 6px 16px;
+        border-radius: 3px;
+        font-weight: 300;
+        font-size: 13px;
+    }
+}

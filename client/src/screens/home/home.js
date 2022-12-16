@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+
 import { ArticlesList } from '../../components/general/articles-list'
 import { HomeHero } from './components/home-hero'
 import { PopularArticles } from './components/popular-articles'
+import { Sidebar } from './components/side-bar'
 
 const Home = () => {
   const renderUserNotLoggedTopScreen = () => {
@@ -22,7 +24,7 @@ const Home = () => {
       <Container>
         <main className='home-screen-mc'>
           <ArticlesList fullPreview />
-          <div className='side-bar'>side-bar</div>
+          <Sidebar />
         </main>
       </Container>
     </div>
