@@ -9,6 +9,17 @@ import { Offcanvas } from 'react-bootstrap'
 import { Logo } from '../logo'
 import { LoginModal } from '../login-modal'
 
+const LogoAndAppName = () => {
+  return (
+    <div className='logo-and-name-container flex aic'>
+      <Logo />
+      <h1 className='siteName'>
+        Blog<span className='it-span'>IT</span>
+      </h1>
+    </div>
+  )
+}
+
 const MainHeader = () => {
   const [activeKey, setActiveKey] = useState('/')
   const [showModal, setModalState] = useState(false)
@@ -20,11 +31,8 @@ const MainHeader = () => {
   return (
     <Navbar bg='dark' variant='dark' expand='md' className='sticky'>
       <Container className='main-header-container'>
-        <Navbar.Brand href='/' className='logo-and-name-container flex aic'>
-          <Logo />
-          <h1 className='siteName'>
-            Blog<span className='it-span'>IT</span>
-          </h1>
+        <Navbar.Brand href='/'>
+          <LogoAndAppName />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Offcanvas
@@ -58,4 +66,4 @@ const MainHeader = () => {
   )
 }
 
-export { MainHeader }
+export { MainHeader, LogoAndAppName }

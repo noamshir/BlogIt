@@ -1,12 +1,4 @@
 .main-header-container {
-  .logo-and-name-container {
-    gap: 5px;
-    .siteName {
-      span {
-        color: #25c4dd;
-      }
-    }
-  }
   .main-header-nav {
     @include tablet-layout {
       align-items: center;
@@ -17,5 +9,14 @@
   padding: 8px 0;
   @include tablet-layout {
     padding: 8px;
+  }
+}
+
+.logo-and-name-container {
+  gap: 5px;
+  .siteName {
+    span {
+      color: #25c4dd;
+    }
   }
 }

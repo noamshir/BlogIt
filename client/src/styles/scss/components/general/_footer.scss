@@ -1,0 +1,15 @@
+.main-footer {
+    border-top: 1px solid $very-light;
+    padding: 12px 0;
+    .social-container {
+        gap: 12px;
+        .linkedin-icon {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            &:hover {
+                color: #0a66c2;
+            }
+        }
+    }
+}
